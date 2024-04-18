@@ -9,15 +9,16 @@
 </head>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 <body>
     <style>
         *{
-            font-family: Bungee Shade;
+            font-family: "Pacifico", cursive;
         }
         .fundo{
-            width: 1920px;
-            height: 1080px;
+            width: 600px;
+            height: 400px;
+            border-radius: 15px;
             background: rgb(255, 255, 255);
             margin: auto;
         }
@@ -51,15 +52,23 @@
     
     <div class="fundo">
         <div style="text-align: center;">
-            <h1>Pergunta?</h1>
+            <h1>Me da um lanche?</h1>
         </div>
-        <div class="quadrado1" style="text-align: center;">
-            <h1>Não</h1>
+        <div>
+            <button class="quadrado1" style="font-size: 30px; position: relative; top: 1rem; margin-left: 8rem;" onclick="window.location.href = 'https://www.youtube.com/watch?v=izGwDsrQ1eQ' ">Sim</button>
         </div>
-        <div class="quadrado2" style="text-align: center;">
-            <h1>Sim</h1>
+        <div>
+            <button class="quadrado1" style="font-size: 30px; position: relative; top: -5.3rem; margin: auto; margin-left: 20rem;" onmouseover="moveButton(this)" onclick="window.location.href = 'https://www.youtube.com/watch?v=OPhefKpgTRk'">Não</button>
         </div>
     </div>
     
+    <script>
+        function moveButton(x) {
+            marginX = Math.floor(Math.random()*600)
+            marginY = Math.floor(Math.random()*600)
+    
+            x.style.margin = marginY.toString() + 'px ' + marginX.toString() + 'px'
+        }
+    </script>
 </body>
 </html>
